@@ -1,0 +1,17 @@
+<div class="fluid-container movie-container" *ngIf="selectedMovie">
+    <div class="row">
+        <div class="col-md-6">
+            image here
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <h2> {{selectedMovie.title}}</h2>
+                <hr>
+            </div>
+            <div class="col-md-12">
+                <app-metadata [selectedMovie]="selectedMovie"></app-metadata>
+            </div>
+        </div>
+    </div>
+
+</div>
