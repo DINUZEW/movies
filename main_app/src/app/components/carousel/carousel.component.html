@@ -1,19 +1,54 @@
-<div class="fluid-container movie-container" *ngIf="allMovies">
-  <div class="container">
-    <div class="genre-filter">
-      <mat-form-field>
-        <mat-label>Genres</mat-label>
-        <mat-select (selectionChange)="filterCarousel($event)">
-          <mat-option *ngFor="let genre of genres" [value]="genre">{{
-            genre
-          }}</mat-option>
-        </mat-select>
-      </mat-form-field>
+<div *ngIf="isPortrait;else landScape">
+  <div class="fluid-container" *ngIf="allMovies">
+    <div class="container full-width">
+      <div class="genre-filter">
+        <mat-form-field>
+          <mat-label>Genres</mat-label>
+          <mat-select (selectionChange)="filterCarousel($event)">
+            <mat-option *ngFor="let genre of genres" [value]="genre">{{
+              genre
+              }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="container full-width center-align">
+      <mat-icon (click)="scrollLeft()">keyboard_arrow_left</mat-icon>
+      <div class="container movie-carousel" id="scrollableElement">
+        <div *ngFor="let slide of filteredMovies">
+          <img src="assets/{{ slide.poster }}" (click)="selectMovie(slide)" />
+        </div>
+      </div>
+      <mat-icon (click)="scrollRight()">keyboard_arrow_right</mat-icon>
     </div>
   </div>
-  <div class="container movie-carousel">
-    <div *ngFor="let slide of filteredMovies">
-        <img src="assets/{{ slide.poster }}" />
-      </div>
-  </div>
 </div>
+
+
+<ng-template #landScape>
+  <div class="fluid-container" *ngIf="allMovies">
+    <div class="container full-width">
+      <div class="genre-filter">
+        <mat-form-field>
+          <mat-label>Genres</mat-label>
+          <mat-select (selectionChange)="filterCarousel($event)">
+            <mat-option *ngFor="let genre of genres" [value]="genre">{{
+              genre
+              }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  
+    <div class="container full-width center-align">
+      <mat-icon (click)="scrollLeft()">keyboard_arrow_left</mat-icon>
+      <div class="container movie-carousel" id="scrollableElement">
+        <div *ngFor="let slide of filteredMovies">
+          <img src="assets/{{ slide.poster }}" (click)="selectMovie(slide)" />
+        </div>
+      </div>
+      <mat-icon (click)="scrollRight()">keyboard_arrow_right</mat-icon>
+    </div>
+  </div>
+</ng-template>

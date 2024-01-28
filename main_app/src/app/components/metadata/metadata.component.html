@@ -1,22 +1,22 @@
-<label>
+<label *ngIf="selectedMovie.released_date">
     <p><strong>Released Date:</strong> {{ selectedMovie.released_date }} </p>
 </label>
-<label>
+<label *ngIf="selectedMovie.plot">
     <p><strong>Plot:</strong> {{ selectedMovie.plot }} </p>
 
 </label>
-<label>
-    <p><strong>Rating:</strong> {{ selectedMovie.rating }} </p>
+<label *ngIf="selectedMovie.rating">
+    <p><strong>Rating:</strong> {{ selectedMovie.rating }} </p><div class="star"></div>
 
 </label>
-<label>
+<label *ngIf="selectedMovie.director">
     <p><strong>Director:</strong> {{ selectedMovie.director}} </p>
 
 </label>
-<label>
+<label *ngIf="selectedMovie.actors">
     <p><strong>Actors:</strong> {{selectedMovie.actors }} </p>
 
 </label>
-<label>
+<label *ngIf="selectedMovie.genre">
     <p><strong>Genre:</strong> {{ selectedMovie.genre}} </p>
 </label>

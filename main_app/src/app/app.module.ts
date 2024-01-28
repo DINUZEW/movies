@@ -9,8 +9,9 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MetadataComponent } from './components/metadata/metadata.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatIconModule } from '@angular/material/icon'
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSelectModule,
+    MatIconModule,
     NgbModule,
   ],
   providers: [],

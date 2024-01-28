@@ -1,8 +1,28 @@
+@media screen and (min-width: 992px) {
+    .poster-image {
+        width: 350px;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    h1 {
+        text-align: center;
+    }
+
+    .poster-image {
+        width: 200px;
+    }
+}
+
 .poster-image {
-    width: 250px;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 3px;
     margin: auto;
+    -webkit-box-shadow: 20px 17px 28px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 20px 17px 28px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 20px 17px 28px -7px rgba(0, 0, 0, 0.75);
 }

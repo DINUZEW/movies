@@ -1,8 +1,23 @@
-.movie-container {
-    width: 95%;
-    display: block;
-    max-height: fit-content;
+@media screen and (min-width: 992px) {
+    .genre-filter {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
+
+
+@media screen and (max-width: 991px) {
+    .fluid-container {
+        margin-top: 125px;
+    }
+
+    .genre-filter {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
 
 img {
     width: 200px;
@@ -11,15 +26,26 @@ img {
 
 .movie-carousel {
     display: inline-flex;
-    max-width: 100%;
-    gap:15px;
+    overflow-x: hidden;
+    gap: 20px;
+    width: 100%;
+    max-width: 99%;
 }
 
 .full-width {
     width: 100%;
+    max-width: 99%;
 }
 
-.genre-filter{
-  display: flex;
-  justify-content: flex-end;
+.center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+mat-icon {
+    transform: scale(2);
+    margin: 6px 8px;
 }

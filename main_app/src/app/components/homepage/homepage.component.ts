@@ -10,6 +10,8 @@ import { Movies } from 'src/app/shared/movies.model';
 export class HomepageComponent implements OnInit {
   public allMovies: Movies[];
   public selectedMovie: Movies;
+  public screenWidth: number;
+  public screenHeight: number;
 
   constructor(private moviesService: MoviesService) {
     this.allMovies = [];
@@ -24,5 +26,7 @@ export class HomepageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.screenWidth = window.innerWidth;  
+    this.screenHeight = window.innerHeight;
   }
 }

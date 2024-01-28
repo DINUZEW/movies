@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-h2 {
+body {
+
+    background-color: aliceblue;
+}
+
+h1 {
     color: #333;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -7,20 +12,28 @@ h2 {
 
 
 .movie-container {
-    background-color: azure;
-    border-radius: 5px;
-    border: 1px solid #000;
+    height: 100%;
     padding: 15px 18px;
     margin: auto;
-    margin-top:64px;
+    margin-top: 64px;
     width: 80%;
-    display: flex;
     align-items: center;
-    box-shadow: 10px 5px 5px grey;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+img {
+    cursor: pointer;
+}
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';

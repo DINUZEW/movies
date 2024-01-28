@@ -1,5 +1,9 @@
-<div class="fluid-container">
-    <app-movie [selectedMovie]="selectedMovie"></app-movie>
+<div class="fluid-container movie-container">
+    <div class="row" style="height: 50%;">
+            <app-movie [selectedMovie]="selectedMovie"></app-movie>
+    </div>
+    <div class="w-100"></div>
+    <div class="row">
+        <app-carousel [allMovies]="allMovies"></app-carousel>
+    </div>
 </div>
-
-<app-carousel [allMovies]="allMovies"></app-carousel>
