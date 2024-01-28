@@ -4,3 +4,17 @@ h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
+
+
+.movie-container {
+    background-color: azure;
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 15px 18px;
+    margin: auto;
+    margin-top:64px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 5px 5px grey;
+}

@@ -1,15 +1,40 @@
 <div class="fluid-container movie-container" *ngIf="allMovies">
     <div class="row">
         <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+            <mat-form-field>
+                <mat-label>Favorite food</mat-label>
+                <mat-select [(ngModel)]="selectedValue" name="food">
+                    @for (food of foods; track food) {
+                    <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+            <p> Selected food: {{selectedValue}} </p>
+            <h4>native html select</h4>
+            <mat-form-field>
+                <mat-label>Favorite car</mat-label>
+                <select matNativeControl [(ngModel)]="selectedCar" name="car">
+                    <option value="" selected></option>
+                    @for (car of cars; track car) {
+                    <option [value]="car.value">{{car.viewValue}}</option>
+                    }
+                </select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
             image here
         </div>
         <div class="col-md-6">
             <div class="col-md-12">
-          
+
             </div>
             <div class="col-md-12">
             </div>
         </div>
     </div>
-
 </div>

@@ -8,12 +8,15 @@ import { Movies } from 'src/app/shared/movies.model';
 })
 export class CarouselComponent implements OnInit {
   @Input() allMovies: Movies[];
+  public genres: string[];
 
 
-  constructor(){};
+  constructor() {
+  };
 
   ngOnInit(): void {
-    
+    this.genres = [...new Set(this.allMovies.flatMap(movie => movie.genre))];
+    console.log(this.genres);
   }
 
 }
