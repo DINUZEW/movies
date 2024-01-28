@@ -15,7 +15,6 @@ export class HomepageComponent implements OnInit {
     this.allMovies = [];
     this.moviesService.getMovies().subscribe((response) => {
       this.allMovies = response;
-      console.log(this.allMovies)
       this.selectedMovie = this.allMovies[0];
     },
       (error) => {

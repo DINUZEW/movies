@@ -8,6 +8,10 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MetadataComponent } from './components/metadata/metadata.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +25,9 @@ import { MetadataComponent } from './components/metadata/metadata.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatSelectModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

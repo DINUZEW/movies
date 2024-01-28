@@ -1,19 +1,19 @@
 <div class="fluid-container movie-container" *ngIf="allMovies">
-    <div class="row">
-        <div class="col-md-6">
-
-        </div>
-        <div class="col-md-6">
-
-        </div>
+  <div class="container">
+    <div class="genre-filter">
+      <mat-form-field>
+        <mat-label>Genres</mat-label>
+        <mat-select (selectionChange)="filterCarousel($event)">
+          <mat-option *ngFor="let genre of genres" [value]="genre">{{
+            genre
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
-    <div class="row full-width">
-        <div class="row">
-            <div class="carousel" *ngIf="allMovies">
-                <img [src]="'assets/' + getCurrentImage()" alt="Carousel Slide" >
-            </div>
-            <div class="controls">
-                <button (click)="prevSlide()">Previous</button>
-                <button (click)="nextSlide()">Next</button>
-            </div>
-        </div>
+  </div>
+  <div class="container movie-carousel">
+    <div *ngFor="let slide of filteredMovies">
+        <img src="assets/{{ slide.poster }}" />
+      </div>
+  </div>
+</div>
