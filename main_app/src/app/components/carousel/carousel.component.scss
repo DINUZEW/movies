@@ -1,4 +1,43 @@
-.movie-container{
+.movie-container {
     width: 95%;
     max-height: fit-content;
 }
+
+img {
+    width: 200px;
+    height: 300px;
+}
+
+.movie-carousel {
+    display: inline-flex;
+    max-width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  img {
+    width: 30%;
+    height: auto;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    cursor: pointer;
+  }
